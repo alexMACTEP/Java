@@ -1,29 +1,11 @@
 public class Main {
     public static void main(String[] args) {
 
-        Integer[] numbers = {1, -2, 32, 0, 6, 8, 1};
-
-        for (int i : sort(numbers)) {
-            System.out.println(i);
-        }
-    }
-
-    public static Integer[] sort(Integer[] mas) {
-
-        boolean flag = true;
-        int temp;
-
-        while (flag) {
-            flag = false;
-            for (int i = 0; i < mas.length - 1; i++) {
-                if (mas[i] > mas[i + 1]) {
-                    temp = mas[i];
-                    mas[i] = mas[i + 1];
-                    mas[i + 1] = temp;
-                    flag = true;
-                }
-            }
-        }
-        return mas;
+        int realize = 6;
+        int add = 5;
+        int dolg = 15;
+        float kpd;
+        kpd = (realize - add) * 10;
+        System.out.println(kpd > 0 ? "snail will win through " + (int) Math.ceil(dolg / kpd) + " sprint \n" : "Snail will lose \n");
     }
 }
