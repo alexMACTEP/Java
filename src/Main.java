@@ -15,10 +15,12 @@ public class Main {
                 char operator = scanner.next().charAt(0);
                 if (operator == 'e') {
                     System.out.println("вы завершили работу");
-                    f = false;
                     break;
                 }
-
+                if (!((operator == ('+')) || (operator == ('-')) || (operator == ('*'))||(operator == ('/')))){
+                    System.out.println("Ошибка ввода");
+                    break;
+                }
                 System.out.print("Введите число: ");
                 double num2 = scanner.nextDouble();
 
@@ -48,7 +50,6 @@ public class Main {
         } catch (InputMismatchException e) {
             System.out.println("Ошибка ввода: "+e.getMessage());
         }
-
     }
 }
 
